@@ -1,0 +1,123 @@
+GET http://localhost:8765/user/save?name=xdasd&age=12
+
+###
+
+GET http://localhost:8765/user/list?pageNum=2&pageSize=5&name=t
+
+###
+
+GET http://localhost:8765/user/query2/2
+
+###
+
+GET http://localhost:8765/user/update?name=xxx&age=99&id=2
+
+###
+
+GET http://localhost:8765/user/list2
+
+###
+
+GET http://localhost:8765/redis/save?key=name&val=lin
+
+###
+
+GET http://localhost:8765/redis/setUser?name=lin&age=12&id=1
+
+###
+
+GET http://localhost:8765/redis/get?key=user:User(id=1, name=lin, age=12)
+
+###
+
+GET http://localhost:8765/rabbitmq/send?msg=hello
+
+###
+
+GET http://localhost:8765/rabbitmq/send/topic?msg=hello rabbit~~
+
+###
+
+GET http://localhost:8765/rabbitmq/send/ack?msg=hello ack
+
+###
+
+GET http://localhost:8765/rabbitmq/send/wrong?msg=hello wrong
+
+###
+
+GET http://localhost:8765/rabbitmq/send/dead?msg=rediect dead
+
+###
+
+GET http://localhost:8765/es/init
+
+###
+
+GET http://localhost:8765/es/add?id=1&title=小米手机7&category=手机&brand=小米&price=3499.00&images=http://image.leyou.com/13123.jpg
+
+###
+
+GET http://localhost:8765/es/add?id=2&title=小米手机8&category=手机&brand=小米&price=3299.00&images=http://image.leyou.com/13124.jpg
+
+###
+
+GET http://localhost:8765/es/add?id=3&title=华为手机8&category=手机&brand=华为&price=4299.00&images=http://image.leyou.com/321.jpg
+
+###
+
+GET http://localhost:8765/es/find?id=1
+
+###
+
+GET http://localhost:8765/es/all?name=price&sort=1
+
+###
+
+GET http://localhost:8765/es/queryByPriceBetween?price1=3000&price2=4000
+
+###
+
+GET http://localhost:8765/es/page?name=title&key=小米&sort=1
+
+###
+
+GET http://localhost:8765/es/rm
+
+###
+
+POST http://localhost:8765/es/addBatch
+Content-Type: application/json
+
+[
+    {
+      "id": 1,
+      "title": "小米手机7",
+      "category": "手机",
+      "brand": "小米",
+      "price": 3499.0,
+      "images": "http://image.leyou.com/13123.jpg"
+    },
+    {
+      "id": 2,
+      "title": "小米手机8",
+      "category": "手机",
+      "brand": "小米",
+      "price": 3299.0,
+      "images": "http://image.leyou.com/13124.jpg"
+    },
+    {
+      "id": 3,
+      "title": "华为手机8",
+      "category": "手机",
+      "brand": "华为",
+      "price": 4299.0,
+      "images": "http://image.leyou.com/321.jpg"
+    }
+  ]
+###
+
+GET http://localhost:8765/es/alias?index=goods&alias=abc
+
+###
+

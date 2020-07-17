@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        .center{
+            width: 380px;
+            height: 538px;
+            background: url("images/zs.png") center no-repeat;
+            margin: 15% auto;
+            font-family: SimSun;
+            position: relative;
+        }
+        .name{
+            position: absolute;
+            top: 216px;
+            left: 60px;
+            font-size: 20px;
+            width: 74px;
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <span class="name">${name}</span>
+</div>
+</body>
+</html>

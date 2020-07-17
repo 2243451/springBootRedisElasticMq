@@ -1,0 +1,39 @@
+version: '3'
+services:
+  mysql-server:
+    image: mysql:5.7
+    container_name: mysql-server
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+  redis-server:
+    image: redis:latest
+    container_name: redis-server
+    command: redis-server --requirepass 123456
+    restart: always
+    ports:
+      - 6379:6379
+  rabbitmq-server:
+    image: rabbitmq:management
+    container_name: rabbitmq-server
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+  elasticsearch:
+    image: es-ik:6.6.2
+    container_name: elasticsearch
+    restart: always
+    environment:
+      - cluster.name=elasticsearch-cluster
+      - node.name=node0
+      - node.master=true
+      - node.data=true
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - 9200:9200
+      - 9300:9300
